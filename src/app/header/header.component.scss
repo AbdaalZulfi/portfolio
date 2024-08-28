@@ -1,0 +1,42 @@
+.header {
+    height: 92px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    // color: #212529;
+    background-color: #1f2233;
+}
+
+
+
+.navigation-item {    
+    font-size: 21px;
+    color: #FBF4E0;
+    padding: 20px;
+    cursor: pointer;
+    user-select: none;    
+    
+    &.active {
+        color: var(--primary-color);
+    }
+}
+
+
+.contact-button {
+    color: var(--primary-color);
+    border: 2px var(--primary-color) solid;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 6px;
+    background: transparent;
+    //trans
+    transition: all 500ms ease-in-out;
+    &:hover {
+        background: var(--primary-color);
+        color: white;
+    }
+}
+

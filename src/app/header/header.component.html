@@ -1,0 +1,13 @@
+<div class="header">
+    <div  
+        *ngFor="let x of navigation"  
+        class="navigation-item" 
+        [ngClass]="{'active': checkIfCurrent(x.name) }"
+        (click)="setNavigation(x)"
+    >
+        {{ x.name }}        
+    </div>    
+    <div class="contact-button">
+        Contact Me
+    </div>
+</div>

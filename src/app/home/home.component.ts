@@ -1,7 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { HeaderComponent } from "../header/header.component";
 
-interface Navigation {
+export interface Navigation {
   id?:number;
   name: string;
 }
@@ -10,11 +11,13 @@ interface Navigation {
   selector: 'app-home',
   standalone: true,
   imports: [
-    CommonModule
+    CommonModule,
+    HeaderComponent
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
+
 export class HomeComponent {
   public selectedNavigation: string = '';
   public navigation: Navigation[] = [
@@ -42,13 +45,13 @@ export class HomeComponent {
 
   ];
 
+  constructor() {
+
+  }
 
   ngOnInit() {
     console.log(this.navigation, "this is mty naivia")
   }
 
-  public setNavigation(name: string): void {
-    this.selectedNavigation = name;
-  }
 
 }

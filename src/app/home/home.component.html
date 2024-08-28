@@ -1,12 +1,9 @@
-<div class="header">
-    <div class="navigation-cont">
-        <div 
-            *ngFor="let x of navigation" 
-            class="navigation-item"
-            [ngClass]="{'active': x.name === selectedNavigation}" 
-            (click)="setNavigation(x.name)"
-        >
-            {{ x.name }}        
-        </div>
-    </div>    
-</div>
+<app-header [navigation]="navigation"></app-header>
+<!-- 
+ [ngClass]={'className': condition } //if
+[ngClass]={ condition ? 'classOnew' :  'classTwo' } //if else
+
+{{}} => take the variable data from ts
+[] => data binding 
+() => to trigger events
+[()] two way data binding -->
